@@ -4,10 +4,19 @@
 
 from xmlrpc.server import SimpleXMLRPCServer
 
-def is_even(n):
-    return n % 2 == 0
+serverName = 'RPC@127.0.0.1'
+
+def getServerName():
+    return serverName
+
+def greeting(greet):
+	if greet == 'Hello':
+		return 'Hi'
+	elif greet == 'How do you do?':
+		return 'How do you do too.'
 
 server = SimpleXMLRPCServer(("localhost", 8000))
 print("Listening on port 8000...")
-server.register_function(is_even, "is_even")
+server.register_function(getServerName, "getServerName")
+server.register_function(greeting, "greeting")
 server.serve_forever()

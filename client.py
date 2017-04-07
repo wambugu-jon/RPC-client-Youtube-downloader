@@ -1,5 +1,10 @@
 import xmlrpc.client
 
 with xmlrpc.client.ServerProxy("http://localhost:8000/") as proxy:
-    print("3 is even: %s" % str(proxy.is_even(3)))
-    print("100 is even: %s" % str(proxy.is_even(100)))
+	print('Hello '+proxy.getServerName())
+	#print('Say hi ')
+	x = input('Say hi ')
+	print(proxy.greeting(x))
+	#print('Say hi again')
+	x = input('Say hi again')
+	print(proxy.greeting(x))
