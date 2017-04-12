@@ -4,7 +4,7 @@ import socket
 with xmlrpc.client.ServerProxy("http://localhost:8000/") as proxy:
 	#This ain't no intro, this the entree
 	#Hit that intro with Elvis and sound like Mercy
-	#Tryna turn my baby mama to my fiancée[If you know where this goes youre awesome👍]
+	#Tryna turn my baby mama to my fiancée[If you know where this is going youre awesome👍]
 
 	print("\n|-------------------------------------------|")
 	print("\n| REGISTRATION NUMBER |        NAME         |")
