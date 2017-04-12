@@ -2,7 +2,9 @@ import xmlrpc.client
 import socket
 
 with xmlrpc.client.ServerProxy("http://localhost:8000/") as proxy:
-	#print('Hello '+ proxy.getServerName() + 'lewis')
+	#This ain't no intro, this the entree
+	#Hit that intro with Elvis and sound like Mercy
+	#Tryna turn my baby mama to my fiancée[If you know where this goes youre awesome👍]
 
 	print("\n|-------------------------------------------|")
 	print("\n| REGISTRATION NUMBER |        NAME         |")
@@ -37,19 +39,6 @@ with xmlrpc.client.ServerProxy("http://localhost:8000/") as proxy:
 
 	#Get user input
 	url = input("\nEnter a valid youtube URL:")
-
-	#if re.match("^(http(s)?:\/\/)?((w){3}.)?youtu(be|.be)?(\.com)?\/.+",url) is True:
-
-	#^(http(s)?:\/\/)?((w){3}.)?youtu(be|.be)?(\.com)?\/.+
-	#matchObj = re.match( r'(.*) are (.*?) .*', line, re.M|re.I)
-
-#   print ("matchObj.group() : ", matchObj.group())
-   #print ("matchObj.group(1) : ", matchObj.group(1))
-   #print ("matchObj.group(2) : ", matchObj.group(2))
-#else:
-   #print ("No match!!")
-	#re.match
-	#url= "https://www.youtube.com/watch?v=JZncdTFNcg0"
 	
 	#Send url to server for processing and return the details of the URL
 	print(proxy.processLink(url) + '\n')
